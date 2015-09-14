@@ -1,0 +1,7 @@
+[Lexer|int INVALID; int NO_TOKENS; int NUMBER; int EXPRESSION; int PLUS; int EOL; int EOF; int EQUALS;  String tokenAtual; int token ; ]
+[<<Calculo>>]
+[Parser| Lexer lexer; String tokenString; int token; String temp; int aux; boolean flag;| Calculo parse(); Calculo expressao(); Calculo soma(); expect(); tokenName(int token2);]
+[Soma |int n1; int n2; | + resolver();]
+[Lexer]->[Parser]
+[Parser]->[Soma |int n1; int n2; | + resolver();]
+[<<Calculo>>]^-.-[Soma |int n1; int n2; | + resolver();] 
